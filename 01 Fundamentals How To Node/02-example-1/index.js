@@ -3,20 +3,19 @@ var fs = require('fs'),
 
 var directory = './documents';
 
-console.log('START');
-
-fs.readdir(directory, function(err, files) {
-    if(err) {
+console.log('Start');
+fs.readdir(directory, function (err, files) {
+    if (err) {
         console.error(err);
         return;
     }
-    for(var i = 0; i < files.length; i ++) {
-        var file = files[i];
+
+    for (var i = 0; i < files.length; i++) {
+        file = files[i];
         console.log(file);
 
-        var fileContenetBuffer = fs.readFileSync(path.join(directory, file));
-        console.log(fileContenetBuffer.toString());
+        var fileContentBuffer = fs.readFileSync(path.join(directory, file));
+        console.log(fileContentBuffer.toString());
     }
 });
-
-console.log('STOP');
+console.log('End');
