@@ -1,15 +1,7 @@
-console.log('FORM CALC');
+console.log('From calc');
 
-// module.exports.add = function (a, b) {
-//     return a + b;
-// };
+exports.add = add;
 
-// module.exports.sub = function (a, b) {
-//     return a - b;
-// };
-
-module.exports = {
-    add: function (a, b) { return a + b },
-    sub: function (a, b) { return a - b }
+function add(left, right) {
+    return left + right;
 }
-
